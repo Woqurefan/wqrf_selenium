@@ -19,11 +19,15 @@
     driver = webdriver.Chrome()
     driver.get("http://wwww.baidu.com/")
     time.sleep(2)
-    getelement(driver,"kw").send_keys('xiaozhu')
-  2.
-  
-  
-  
+    getelement(driver,"seachinput").send_keys('xiaozhu')
+  2.首次运行一下，会自动生成存放elements.xls文件，会打印出此文件地址  
+  3.手动进入elements.xls,把要定位的页面元素手动复制粘贴到excel表中，每行一个元素  
+    第一列：元素的标识,用于之后代码中直接调用该元素，如示范代码中的“seachinput”  
+    第二列：元素的默认定位方式，如id  
+    第三列：元素的默认定位值，如 kw  
+    第四列：元素的下标，默认0，算法获取元素是获取符合要求的所有元素    
+    第五列：元素的html源码标签，可以在浏览器的调试/检查中直接选中元素，然后右键copy_element    
+  4.在代码中调用getelement方法，传入driver和元素标识即可，后续前端页面的各种更改，这个定位代码都会成功找到  
 ## 依赖包:  
   1.selenium  
   2.Levenshtein  
@@ -34,3 +38,4 @@
   1.增加csv文件存放elements  
   2.增加数据库存放elements  
   3.增加xpath自动生产算法  
+  4.增加自动录入html源码功能  
