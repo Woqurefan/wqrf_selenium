@@ -1,4 +1,4 @@
-# wqrf_selenium
+# wqrf_selenium 简称 wqrfnium
 封装的selenium和po模式，可自动维护元素和减少前端ui修改带来的麻烦工作量  
 ---------
 ## 功能：  
