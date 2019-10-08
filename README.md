@@ -11,6 +11,19 @@
   3.其中的所有分数权重参数可自行根据公司项目风格更改，来达到99%以上的成功率。  
   4.博主更新快，框架优化和前景非常nice。  
   5.可稍加变化应用到appium中  
+## 使用方法:  
+  1.示范代码:
+  
+    from selenium import webdriver
+    from wqrfnium import *
+    driver = webdriver.Chrome()
+    driver.get("http://wwww.baidu.com/")
+    time.sleep(2)
+    getelement(driver,"kw").send_keys('xiaozhu')
+  2.
+  
+  
+  
 ## 依赖包:  
   1.selenium  
   2.Levenshtein  
