@@ -11,3 +11,13 @@
   3.其中的所有分数权重参数可自行根据公司项目风格更改，来达到99%以上的成功率。  
   4.博主更新快，框架优化和前景非常nice。  
   5.可稍加变化应用到appium中  
+## 依赖包:  
+  1.selenium  
+  2.Levenshtein  
+  3.python2  
+  4.xlrd  
+  5.xlutils  
+## 升级预告:  
+  1.增加csv文件存放elements
+  2.增加数据库存放elements
+  3.增加xpath自动生产算法
