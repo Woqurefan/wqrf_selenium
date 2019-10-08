@@ -18,6 +18,6 @@
   4.xlrd  
   5.xlutils  
 ## 升级预告:  
-  1.增加csv文件存放elements
-  2.增加数据库存放elements
-  3.增加xpath自动生产算法
+  1.增加csv文件存放elements  
+  2.增加数据库存放elements  
+  3.增加xpath自动生产算法  
