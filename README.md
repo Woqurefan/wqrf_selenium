@@ -12,7 +12,7 @@
   4.博主更新快，框架优化和前景非常nice。  
   5.可稍加变化应用到appium中  
 ## 下载方法:  
-  1.可以用pip install wqrfnium
+  1.可以用pip install wqrfnium  
   2.可以download本项目
 ## 使用方法:  
   1.示范代码:
