@@ -46,7 +46,7 @@
 ## 依赖包:  
   1.selenium  
   2.python-Levenshtein     
-  3.python2  
+  3.python2/3  
   4.xlrd  
   5.xlutils  
   6.configparser  
