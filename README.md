@@ -3,7 +3,7 @@
 ---------
 ## 更新：
   修复部分用户自动生成的xls文件打不开问题  
-  增加可自动移excle表位置代码：begin_wqrf('./MyElements.xls')
+  增加可自动移excle表位置代码：begin_wqrf('./MyElements.xls')  
   新增首次无需手动粘贴html_element字段，系统会自动生成。  
   同时支持py2,py3
 ## 您需要注意的部分：  
