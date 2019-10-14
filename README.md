@@ -45,7 +45,7 @@
   4.在代码中调用getelement方法，传入driver和元素标识即可，后续前端页面的各种更改，这个定位代码都会成功找到  
 ## 依赖包:  
   1.selenium  
-  2.Levenshtein  
+  2.python-Levenshtein     
   3.python2  
   4.xlrd  
   5.xlutils  
