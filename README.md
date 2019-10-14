@@ -3,8 +3,9 @@
 ---------
 ## 更新：
   修复部分用户自动生成的xls文件打不开问题  
+  增加可自动移excle表位置代码：begin_wqrf('./MyElements.xls')
   新增首次无需手动粘贴html_element字段，系统会自动生成。  
-  默认支持python2
+  同时支持py2,py3
 ## 您需要注意的部分：  
   wqrfnium会自动生成一个excel表,并打印表位置，您需要把您selenium脚本中经常容易因前端变化导致定位失败的元素放入此表中  
   每行一个元素，列含义：  
@@ -29,7 +30,7 @@
   
     from selenium import webdriver
     from wqrfnium import *
-    begin_wqrf('./MyElements2.xls')
+    begin_wqrf('./MyElements.xls')
     driver = webdriver.Chrome()
     driver.get("http://www.baidu.com/")
     time.sleep(2)
