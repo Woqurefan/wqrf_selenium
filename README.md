@@ -8,12 +8,11 @@
 ## 您需要维护的部分：  
   wqrfnium会自动生成一个excel表,并打印表位置，您需要把您selenium脚本中经常容易因前端变化导致定位失败的元素放入此表中  
   每行一个元素，列含义：  
-  元素标识-icon(如:seach_input)，  
-  默认定位方式-id/name/class等，  
-  默认定位值-username/password/kw/login等，  
-  下标-0~9999，  
-  原始html标签内容-<input id="kw" class="" .....>等      
-  
+  元素标识-icon：用户自行输入(如:seach_input/my_username),之后脚本中getelement方法中需要传入driver和icon    
+  默认定位方式-tmp_find_method：用户需自行输入初始(如id/name等)，之后脚本会自行维护无需再度关心  
+  默认定位值-tmp_find_value：用户需自行输入初始(如username/password/kw/login等),之后脚本会自行维护无需再度关心  
+  下标-index：用户自行输入初始(如0/1/2/3....),之后脚本会自行维护无需再度关心  
+  原始html标签内容-html_element-：系统自动生成，无需关心
 ## 原理：  
   selenium定位时默认先利用excel表中的默认定位方式和默认值定位，若定位失败，则启动自动定位算法，找到最符合要求的元素返回，并把新元素的tagname定位方式和内容写入excel表中以便下次调用。  
 ## 优点：
