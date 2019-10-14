@@ -29,11 +29,12 @@
   
     from selenium import webdriver
     from wqrfnium import *
+    begin_wqrf('./MyElements2.xls')
     driver = webdriver.Chrome()
-    driver.get("http://wwww.baidu.com/")
+    driver.get("http://www.baidu.com/")
     time.sleep(2)
     getelement(driver,"seachinput").send_keys('xiaozhu')
-  2.首次运行一下，会自动生成存放elements.xls文件，会打印出此文件地址  
+  2.首次运行一下，会自动生成存放elements.xls文件，会打印出此文件地址(begin_wqrf()为初始化语句，可传入自定义的excel表路径，若不写则会在默认位置生成)  
   3.手动进入elements.xls,把要定位的页面元素手动输入定位方式和定位值,粘贴到excel表中，每行一个元素  
     第一列：元素的标识,用于之后代码中直接调用该元素，如示范代码中的“seachinput”  
     第二列：元素的默认定位方式，如id  
@@ -47,6 +48,7 @@
   3.python2  
   4.xlrd  
   5.xlutils  
+  6.configparser  
 ## 升级预告:  
   1.增加csv文件存放elements  
   2.增加数据库存放elements  
