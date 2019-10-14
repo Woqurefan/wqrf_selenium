@@ -7,7 +7,13 @@
   默认支持python2,目前python3报错问题修复
 ## 您需要维护的部分：  
   wqrfnium会自动生成一个excel表,并打印表位置，您需要把您selenium脚本中经常容易因前端变化导致定位失败的元素放入此表中  
-  每行一个元素，列含义：元素标识，默认定位方式，默认定位值，下标，原始html标签内容   
+  每行一个元素，列含义：  
+  元素标识-icon(如:seach_input)，  
+  默认定位方式-id/name/class等，  
+  默认定位值-username/password/kw/login等，  
+  下标-0~9999，  
+  原始html标签内容-<input id="kw" class="" .....>等      
+  
 ## 原理：  
   selenium定位时默认先利用excel表中的默认定位方式和默认值定位，若定位失败，则启动自动定位算法，找到最符合要求的元素返回，并把新元素的tagname定位方式和内容写入excel表中以便下次调用。  
 ## 优点：
