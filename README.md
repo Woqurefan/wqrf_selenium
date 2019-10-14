@@ -5,7 +5,7 @@
   修复部分用户自动生成的xls文件打不开问题  
   新增首次无需手动粘贴html_element字段，系统会自动生成。  
   默认支持python2,目前python3报错问题修复
-## 您需要维护的部分：  
+## 您需要注意的部分：  
   wqrfnium会自动生成一个excel表,并打印表位置，您需要把您selenium脚本中经常容易因前端变化导致定位失败的元素放入此表中  
   每行一个元素，列含义：  
   元素标识-icon：用户自行输入(如:seach_input/my_username),之后脚本中getelement方法中需要传入driver和icon    
