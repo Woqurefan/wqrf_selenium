@@ -29,7 +29,7 @@
   1.示范代码:
   
     from selenium import webdriver
-    from wqrfnium import *
+    from wqrfnium.wqrfnium import *
     begin_wqrf('./MyElements.xls')
     driver = webdriver.Chrome()
     driver.get("http://www.baidu.com/")
