@@ -1,11 +1,9 @@
 # wqrf_selenium 简称 wqrfnium
 封装的selenium和po模式，可自动维护元素和减少前端ui修改带来的麻烦工作量  
 ---------
-## 更新：
-  修复部分用户自动生成的xls文件打不开问题  
-  增加可自动移excle表位置代码：begin_wqrf('./MyElements.xls')  
-  新增首次无需手动粘贴html_element字段，系统会自动生成。  
-  同时支持py2,py3
+## 最新更新：
+  增加api获取/更新 自动维护元素 的方式，可用 from wqrfnium.wqrfnium_api import * 替换 from wqrfnium.wqrfnium import *  
+  具体使用方式请细读 使用方法-api  
 ## 您需要注意的部分：  
   wqrfnium会自动生成一个excel表,并打印表位置，您需要把您selenium脚本中经常容易因前端变化导致定位失败的元素放入此表中  
   每行一个元素，列含义：  
@@ -25,7 +23,7 @@
 ## 下载方法:  
   1.可以用pip install wqrfnium  
   2.可以download本项目
-## 使用方法:  
+## 使用方法-exlce:  
   1.示范代码:
   
     from selenium import webdriver
@@ -43,6 +41,30 @@
     第四列：元素的下标，一般都写0，算法获取元素是获取符合要求的所有元素    
     第五列：元素的html源码标签，无需注意，由系统自动生成。  
   4.在代码中调用getelement方法，传入driver和元素标识即可，后续前端页面的各种更改，这个定位代码都会成功找到  
+## 使用方法-api:
+  1.示范代码:
+  
+    from selenium import webdriver
+    from wqrfnium_api import *
+    get_api_url = "http://xxx.xxx.xxx/aaa/get_element_test/***/"
+    update_api_url = "http://xxx.xxx.xxx/bbb/update_element_test/***/"
+    begin_wqrf(get_api_url,update_api_url)
+    driver = webdriver.Chrome()
+    driver.get("http://www.baidu.com/")
+    time.sleep(2)
+    getelement(driver,"searchinput").send_keys('xiaozhu')
+  2.首次运行会把配置写入配置文件，之后无需再加入begin_wqrf()方法
+  3.您的获取/更新元素接口需要满足如下要求  
+  获取元素的api：  
+  1.url 中必须有***来占位，这个***就是后来会替换成元素的icon  
+  2.必为get  
+  3.返回值根路径必须含有元素的五种属性即：{“icon”:"",“tmp_find_method”:"",“tmp_find_value”:"",“index”:"",“html_element”:"",}  
+  更新元素的api：  
+  1.url 中必须有***来占位，这个***就是后来会替换成元素的icon  
+  2.必为post  
+  3.请求体根路径必须含有元素的五种属性即：{“tmp_find_method”:"",“tmp_find_value”:"",“index”:"",“html_element”:"",}  
+  具体使用帮助可参考博文：https://blog.csdn.net/qq_22795513/article/details/103182097
+  
 ## 依赖包:  
   1.selenium  
   2.python-Levenshtein     
@@ -50,9 +72,16 @@
   4.xlrd  
   5.xlutils  
   6.configparser  
-## 升级预告:  
-  1.增加csv文件存放elements  
-  2.增加数据库存放elements  
-  3.增加xpath自动生产算法  
-  4.增加自动录入html源码功能  
-  5.支持python3版本即将更新  
+  7.requests
+## 联系作者:
+  qq:1074321997
+  
+## 历史更新：
+  修复部分用户自动生成的xls文件打不开问题  
+  增加可自动移excle表位置代码：begin_wqrf('./MyElements.xls')  
+  新增首次无需手动粘贴html_element字段，系统会自动生成。  
+  同时支持py2,py3 
+  
+  
+  
+  
